@@ -6,9 +6,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.path_info.split("/items/").last
-      # binding.pry
       found_item = @@items.find() do |i|
-        # binding.pry
         i.name  == item
       end
       if found_item != nil
